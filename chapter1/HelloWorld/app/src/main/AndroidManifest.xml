@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Hello2021"
+        android:label="Hello20210404"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Hello3">
