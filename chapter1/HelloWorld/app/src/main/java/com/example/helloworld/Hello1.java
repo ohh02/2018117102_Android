@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -86,9 +87,16 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {
 //            intent1.setData(Uri.parse("http://www.hstc.edu.cn"));
 //            startActivity(intent1);
         }
+        if (v.getId() == R.id.btToHello4) {
+            Intent intent;
+            intent = new Intent(this, Hello4.class);
+//            Intent intent1 = new Intent(Intent.ACTION_VIEW);
+//            intent1.setData(Uri.parse("http://www.hstc.edu.cn"));
+            startActivity(intent);
+        }
     }
 
-    private void setupButtons() {
+    private void setupButtons(){
         Button b;
 
         b = (Button) findViewById(R.id.btToHello1);
@@ -96,6 +104,8 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {
         b = (Button) findViewById(R.id.btToHello2);
         b.setOnClickListener(this);
         b = (Button) findViewById(R.id.btToHello3);
+        b.setOnClickListener(this);
+        b = (Button) findViewById(R.id.btToHello4);
         b.setOnClickListener(this);
 
     }

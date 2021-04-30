@@ -7,17 +7,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class Hello2 extends AppCompatActivity implements View.OnClickListener {
-
-    private final static String TAG = "Hello2";
+public class Hello4 extends AppCompatActivity implements View.OnClickListener {
+    private final static String TAG = "Hello4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hello2);
+        setContentView(R.layout.activity_hello4);
         Log.d(TAG, "onCreate execute");
-        setTitle("Hello2");
+        setTitle("Hello4");
         setupButtons();
+        Intent intent = this.getIntent();
+        if (intent == null) {
+            Log.d("test tag", "This activity is invoked without an intent");
+        }
     }
 
     @Override
@@ -56,7 +59,6 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
         Log.d(TAG, "onDestroy");
     }
 
-
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btToHello1) {
@@ -92,5 +94,6 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
         b.setOnClickListener(this);
         b = (Button) findViewById(R.id.btToHello4);
         b.setOnClickListener(this);
+
     }
 }
